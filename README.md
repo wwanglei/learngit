@@ -30,4 +30,4 @@ git log --graph命令可以看到分支合并图
 
 当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。
 
-git push origin dev 给远程创建了一个dev
+如果之前远程没有dev: git push origin dev 给远程创建了一个dev
