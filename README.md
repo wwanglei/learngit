@@ -12,3 +12,10 @@ Git支持多种协议，包括https，但通过ssh支持的原生git协议速度
 
 ----
 
+## 分支管理
+
+git merge dev
+
+git merge命令用于合并指定分支dev到当前分支
+
+
