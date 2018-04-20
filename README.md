@@ -31,3 +31,30 @@ git log --graph命令可以看到分支合并图
 当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。
 
 如果之前远程没有dev: git push origin dev 给远程创建了一个dev
+
+---
+
+你的小伙伴要在dev分支上开发，就必须创建远程origin的dev分支到本地，于是他用这个命令创建本地dev分支：
+
+git checkout -b dev origin/dev
+
+修改
+
+git push origin dev // 不需要origin/dev
+
+git branch --set-upstream dev origin/dev // 以后在dev上git pull的话 直接从origin/dev上pull
+
+------
+查看远程库信息，使用git remote -v；
+
+本地新建的分支如果不推送到远程，对其他人就是不可见的；
+
+从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
+
+在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+
+建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
+
+从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
+
+
