@@ -18,4 +18,11 @@ git merge dev
 
 git merge命令用于合并指定分支dev到当前分支
 
+Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容，我们修改后保存
+
+git add readme.txt 
+
+git commit -m "conflict fixed"
+
+git log --graph命令可以看到分支合并图
 
